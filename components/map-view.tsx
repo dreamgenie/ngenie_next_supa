@@ -878,8 +878,8 @@ export default function MapView() {
           center={mapCenter}
           zoom={zoom}
           mapType={mapType}
-          connections={connections}
-          connectionLines={connectionLines}
+          connections={connections as { id: number; name: string; role: string; company: string; location: string; coordinates: [number, number]; type: string; avatar: string; }[]}
+          connectionLines={connectionLines as [number, number][]}
           showConnectionLines={showConnectionLines}
           selectedConnection={selectedConnection}
           userLocation={userLocation}
